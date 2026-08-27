@@ -2,81 +2,187 @@
 <html>
 
 <head>
-    <title>Novax Wallet</title>
 
-    <style>
+<title>Novax Wallet</title>
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-        }
+<style>
 
-        .container {
-            width: 380px;
-            margin: 40px auto;
-            background: #1e293b;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.4);
-        }
+body {
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+}
 
-        h1 {
-            text-align: center;
-            color: #38bdf8;
-        }
 
-        .card {
-            background: #334155;
-            padding: 15px;
-            border-radius: 15px;
-            margin-top: 15px;
-        }
+.container {
 
-        .address {
-            font-size: 14px;
-            color: #cbd5e1;
-            word-break: break-all;
-        }
+    width:390px;
+    margin:30px auto;
+    background:#1e293b;
+    padding:25px;
+    border-radius:22px;
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
 
-        .balance {
-            font-size: 32px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+}
 
-        .token {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #475569;
-        }
 
-        .buttons {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
+.header {
 
-        button {
-            width: 48%;
-            padding: 12px;
-            margin-top: 10px;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            font-size: 15px;
-            background: #38bdf8;
-            color: #0f172a;
-            font-weight: bold;
-        }
+    text-align:center;
 
-        button:hover {
-            background: #7dd3fc;
-        }
+}
 
-    </style>
+
+.logo {
+
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+
+}
+
+
+.network {
+
+    margin-top:8px;
+    font-size:14px;
+    color:#22c55e;
+
+}
+
+
+
+.card {
+
+    background:#334155;
+    padding:18px;
+    border-radius:18px;
+    margin-top:15px;
+
+}
+
+
+
+.address {
+
+    font-size:13px;
+    color:#cbd5e1;
+    word-break:break-all;
+
+}
+
+
+.copy-btn {
+
+    margin-top:10px;
+    background:#38bdf8;
+    border:none;
+    padding:8px 15px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+
+}
+
+
+
+.balance {
+
+    font-size:34px;
+    font-weight:bold;
+
+}
+
+
+
+.asset {
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 0;
+    border-bottom:1px solid #475569;
+
+}
+
+
+.asset:last-child {
+
+    border-bottom:none;
+
+}
+
+
+.coin {
+
+    font-weight:bold;
+
+}
+
+
+.amount {
+
+    color:#cbd5e1;
+
+}
+
+
+
+button {
+
+    border:none;
+    cursor:pointer;
+
+}
+
+
+
+.actions {
+
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+
+}
+
+
+
+.action-btn {
+
+    width:48%;
+    padding:12px;
+    border-radius:12px;
+    background:#38bdf8;
+    font-weight:bold;
+
+}
+
+
+
+.history {
+
+    text-align:center;
+    color:#cbd5e1;
+
+}
+
+
+
+.nav {
+
+    display:flex;
+    justify-content:space-around;
+    margin-top:20px;
+    padding-top:15px;
+    border-top:1px solid #475569;
+    color:#94a3b8;
+
+}
+
+
+</style>
+
 
 </head>
 
@@ -87,86 +193,123 @@
 <div class="container">
 
 
-    <h1>Novax Wallet</h1>
+<div class="header">
 
+<div class="logo">
+🚀 Novax Wallet
+</div>
 
-    <div class="card">
+<div class="network">
+● Ethereum Mainnet Connected
+</div>
 
-        <h3>Wallet Address</h3>
-
-        <p class="address">
-            0x742d35Cc6634C0532925a3b844Bc454e4438f91
-        </p>
-
-    </div>
-
-
-
-    <div class="card">
-
-        <h3>Portfolio Value</h3>
-
-        <div class="balance">
-            $0.00
-        </div>
-
-    </div>
+</div>
 
 
 
 
-    <div class="card">
-
-        <h3>Assets</h3>
+<div class="card">
 
 
-        <div class="token">
-            <span>ETH</span>
-            <span>0.00</span>
-        </div>
+<h3>Wallet Address</h3>
 
 
-        <div class="token">
-            <span>BTC</span>
-            <span>0.00</span>
-        </div>
+<div class="address" id="wallet">
+
+0x742d35Cc6634C0532925a3b844Bc454e4438f91
+
+</div>
 
 
-        <div class="token">
-            <span>USDT</span>
-            <span>0.00</span>
-        </div>
+<button class="copy-btn" onclick="copyAddress()">
+
+Copy Address
+
+</button>
 
 
-    </div>
+</div>
 
 
 
 
-    <div class="buttons">
 
 
-        <button onclick="sendCrypto()">
-            Send
-        </button>
+<div class="card">
 
 
-        <button onclick="receiveCrypto()">
-            Receive
-        </button>
+<h3>
+Portfolio Value 👁
+</h3>
 
 
-        <button onclick="swapCrypto()">
-            Swap
-        </button>
+<div class="balance" id="balance">
+
+$0.00
+
+</div>
 
 
-        <button onclick="buyCrypto()">
-            Buy Crypto
-        </button>
+<button class="copy-btn" onclick="hideBalance()">
+
+Hide Balance
+
+</button>
 
 
-    </div>
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>Assets</h3>
+
+
+<div class="asset">
+
+<div class="coin">
+♦ Ethereum (ETH)
+</div>
+
+<div class="amount">
+0.00
+</div>
+
+</div>
+
+
+
+<div class="asset">
+
+<div class="coin">
+₿ Bitcoin (BTC)
+</div>
+
+<div class="amount">
+0.00
+</div>
+
+</div>
+
+
+
+<div class="asset">
+
+<div class="coin">
+₮ Tether (USDT)
+</div>
+
+<div class="amount">
+0.00
+</div>
+
+</div>
 
 
 
@@ -175,33 +318,125 @@
 
 
 
+
+
+
+<div class="actions">
+
+
+<button class="action-btn">
+Send
+</button>
+
+
+<button class="action-btn">
+Receive
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div class="card history">
+
+
+<h3>
+Recent Activity
+</h3>
+
+
+<p>
+No transactions yet
+</p>
+
+
+<p>
+Your blockchain activity will appear here
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="nav">
+
+
+<div>
+Home
+</div>
+
+
+<div>
+Activity
+</div>
+
+
+<div>
+Settings
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
 <script>
 
 
-function sendCrypto(){
+function copyAddress(){
 
-    alert("Send feature coming soon");
+let address=document.getElementById("wallet").innerText;
 
-}
+navigator.clipboard.writeText(address);
 
-
-function receiveCrypto(){
-
-    alert("Your wallet address is ready to receive crypto");
+alert("Wallet address copied!");
 
 }
 
 
-function swapCrypto(){
 
-    alert("Swap feature coming soon");
+let visible=true;
+
+
+function hideBalance(){
+
+
+let balance=document.getElementById("balance");
+
+
+if(visible){
+
+balance.innerHTML="••••••";
+
+visible=false;
 
 }
 
+else{
 
-function buyCrypto(){
+balance.innerHTML="$0.00";
 
-    alert("Buy Crypto feature coming soon");
+visible=true;
+
+}
+
 
 }
 
@@ -210,6 +445,8 @@ function buyCrypto(){
 
 
 
+
 </body>
+
 
 </html>
