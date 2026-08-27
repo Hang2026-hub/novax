@@ -1,0 +1,55 @@
+body {
+
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+
+}
+
+
+.container {
+
+    width: 400px;
+    margin: 100px auto;
+    text-align: center;
+
+}
+
+
+button {
+
+    padding: 15px 30px;
+    background: #4caf50;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+
+}body {
+
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+
+}
+
+
+.container {
+
+    width: 400px;
+    margin: 100px auto;
+    text-align: center;
+
+}
+
+
+button {
+
+    padding: 15px 30px;
+    background: #4caf50;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
