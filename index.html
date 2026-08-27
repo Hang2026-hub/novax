@@ -1,19 +1,215 @@
-<style>
-  button {
-    cursor: pointer;
-    font-size: 15px;
-    background: #38bdf8;
-    color: #0f172a;
-    font-weight: bold;
-  }
+<!DOCTYPE html>
+<html>
 
-  button:hover {
-    background: #7dd3fc;
-  }
+<head>
+    <title>Novax Wallet</title>
 
-  .buttons {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-</style>
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        .container {
+            width: 380px;
+            margin: 40px auto;
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+
+        h1 {
+            text-align: center;
+            color: #38bdf8;
+        }
+
+        .card {
+            background: #334155;
+            padding: 15px;
+            border-radius: 15px;
+            margin-top: 15px;
+        }
+
+        .address {
+            font-size: 14px;
+            color: #cbd5e1;
+            word-break: break-all;
+        }
+
+        .balance {
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .token {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #475569;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        button {
+            width: 48%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 15px;
+            background: #38bdf8;
+            color: #0f172a;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #7dd3fc;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <h1>Novax Wallet</h1>
+
+
+    <div class="card">
+
+        <h3>Wallet Address</h3>
+
+        <p class="address">
+            0x742d35Cc6634C0532925a3b844Bc454e4438f91
+        </p>
+
+    </div>
+
+
+
+    <div class="card">
+
+        <h3>Portfolio Value</h3>
+
+        <div class="balance">
+            $0.00
+        </div>
+
+    </div>
+
+
+
+
+    <div class="card">
+
+        <h3>Assets</h3>
+
+
+        <div class="token">
+            <span>ETH</span>
+            <span>0.00</span>
+        </div>
+
+
+        <div class="token">
+            <span>BTC</span>
+            <span>0.00</span>
+        </div>
+
+
+        <div class="token">
+            <span>USDT</span>
+            <span>0.00</span>
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="buttons">
+
+
+        <button onclick="sendCrypto()">
+            Send
+        </button>
+
+
+        <button onclick="receiveCrypto()">
+            Receive
+        </button>
+
+
+        <button onclick="swapCrypto()">
+            Swap
+        </button>
+
+
+        <button onclick="buyCrypto()">
+            Buy Crypto
+        </button>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+
+<script>
+
+
+function sendCrypto(){
+
+    alert("Send feature coming soon");
+
+}
+
+
+function receiveCrypto(){
+
+    alert("Your wallet address is ready to receive crypto");
+
+}
+
+
+function swapCrypto(){
+
+    alert("Swap feature coming soon");
+
+}
+
+
+function buyCrypto(){
+
+    alert("Buy Crypto feature coming soon");
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
